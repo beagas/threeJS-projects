@@ -42,7 +42,7 @@ function createEarth(dayMapJPG, nightMapJPG) {
             dayTexture: { value: dayMap },
             nightTexture: { value: nightMap },
             //cloudTexture: { value: cloudMap },
-            lightDirection: { value: new THREE.Vector3(45, 20, 20) },
+            lightDirection: { value: new THREE.Vector3(20, 20, 20) },
         },
         vertexShader: `
             varying vec2 vUv;
@@ -83,6 +83,16 @@ function createEarth(dayMapJPG, nightMapJPG) {
     scene.add(earthGroup);
 }
 
+function createGlow() {
+    const ambientLight = new THREE.AmbientLight(0xffffff, 1); // Strong ambient light
+    scene.add(ambientLight);
+
+    const geometry = new THREE.SphereGeometry(1, 64, 64);
+    fresnelMesh = new THREE.Mesh(geometry, fresnelMat);
+    fresnelMesh.scale.set(1.001, 1.001, 1.001);
+    earthGroup.add(fresnelMesh);
+}
+
 function createClouds(cloudMapJPG) {
     const ambientLight = new THREE.AmbientLight(0xffffff, 1); // Strong ambient light
     scene.add(ambientLight);
@@ -93,7 +103,7 @@ function createClouds(cloudMapJPG) {
     const cloudsMat = new THREE.MeshStandardMaterial({
         map: cloudMap,
         //color: 0xffffff,
-        //transparent: true,   // Enable transparency
+        transparent: true,   // Enable transparency
         opacity: 0.5,        // Adjust opacity
         blending: THREE.AdditiveBlending,
         // side: THREE.DoubleSide,  // Render both sides
@@ -104,15 +114,6 @@ function createClouds(cloudMapJPG) {
     earthGroup.add(cloudsMesh);
 }
 
-function createGlow(){
-    const ambientLight = new THREE.AmbientLight(0xffffff, 1); // Strong ambient light
-    scene.add(ambientLight);
-
-    const geometry = new THREE.SphereGeometry(1, 64, 64);
-    fresnelMesh = new THREE.Mesh(geometry, fresnelMat);
-    fresnelMesh.scale.set(1.02, 1.02, 1.02);
-    earthGroup.add(fresnelMesh);
-}
 
 function createStars(numOfStars) {
     const stars = getStarfield({ numStars: numOfStars });
@@ -137,8 +138,8 @@ function animate() {
 function init() {
     initScene();
     createEarth(dayMapJPG, nightMapJPG);
-    createClouds(cloudMapJPG);
     createGlow();
+    createClouds(cloudMapJPG);
     createStars(numOfStars);
     initControls();
     animate();
