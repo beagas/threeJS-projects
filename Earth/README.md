@@ -14,7 +14,7 @@ This project is a 3D Earth visualization built using **Three.js**, a popular 3D 
 
 ## Project Structure
 
-```bash
+---
 .
 ├── index.html          # Entry point for the application.
 ├── main.js             # Main JavaScript file that initializes the scene.
