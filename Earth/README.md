@@ -19,7 +19,7 @@ This project is a 3D Earth visualization built using **Three.js**, a popular 3D 
 - **index.html**          # Entry point for the application.
 - **main.js**             # Main JavaScript file that initializes the scene.
 - **getStarfield.js**     # Module for generating a starfield around the Earth.
-- **getFresnelMat.js **   # Module to create a Fresnel material for the glow effect.
+- **getFresnelMat.js**   # Module to create a Fresnel material for the glow effect.
 - **textures/**           # Folder containing Earth textures (day, night, clouds).
 - **shaders/**            # Shader files for custom fragment and vertex shaders.
 - **README.md**           # This file!
