@@ -29,7 +29,7 @@ This project is a 3D Earth visualization built using **Three.js**, a popular 3D 
 
 ## Live Demo
 You can see a live demo of this project [here](https://beagas.github.io/Earth-Visualization-GitHub/) 
-![A little peak](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2J1c2pidGZiNDE0ajFwZHYyOHc2b2pzdjE5MWppbXNyMnVlbHQ1dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ynUVVKmGNsMAEmZ3yE/giphy.gif))
+![A little peak](./earth.gif)
 
 ---
 
