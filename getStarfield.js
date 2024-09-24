@@ -7,8 +7,8 @@ export default function getStarfield({ numStars = 2000 } = {}) {
         const v = Math.random();
         const theta = 2 * Math.PI * u;
         const phi = Math.acos(2 * v - 1);
-        let x = (radius * Math.sin(phi) * Math.cos(theta));
-        let y = (radius * Math.sin(phi) * Math.sin(theta));
+        let x = radius * Math.sin(phi) * Math.cos(theta);
+        let y = radius * Math.sin(phi) * Math.sin(theta);
         let z = radius * Math.cos(phi);
 
         return {

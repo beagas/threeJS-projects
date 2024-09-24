@@ -14,7 +14,7 @@ let sunLight = new THREE.Vector3(20, 20, 20);
 let rimHex = 0x4bc5c4;
 const facingHex = 0x000000;
 let starGroup = new THREE.Group();
-let numOfStars = 1000;
+let numOfStars = 50000;
 const gui = new GUI();
 
 function initScene() {
@@ -188,9 +188,9 @@ function controlSun() {
 
 function controlNumOfStars() {
     const starParams = {
-        exampleProperty: 1000
+        exampleProperty: 50000
     };
-    gui.add(starParams, 'exampleProperty', 0, 10000).name('Number of Stars').step(1000).onChange((value) => {
+    gui.add(starParams, 'exampleProperty', 0, 50000).name('Number of Stars').step(10000).onChange((value) => {
         createStars(value); // Call createStars with the new number of stars
     });
 }
