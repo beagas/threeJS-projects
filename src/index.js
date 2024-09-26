@@ -8,9 +8,9 @@ import { createStarGroup } from "./stars.js";
 
 let scene, camera, renderer, earthGroup, dayNight, cloudsMesh, fresnelMesh;
 
-const dayMapJPG = './textures/00_earthmap1k.jpg';
-const nightMapJPG = './textures/earth_lights_lrg.jpg';
-const cloudMapJPG = './textures/05_earthcloudmaptrans.jpg';
+const dayMapJPG = './00_earthmap1k.jpg';
+const nightMapJPG = './earth_lights_lrg.jpg';
+const cloudMapJPG = './05_earthcloudmaptrans.jpg';
 let sunLight = new THREE.Vector3(20, 20, 20);
 const rimHex = 0x4bc5c4;
 const facingHex = 0x000000;

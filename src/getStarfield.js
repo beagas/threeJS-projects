@@ -36,7 +36,7 @@ export default function getStarfield({ numStars = 2000 } = {}) {
     const mat = new THREE.PointsMaterial({
         size: 0.2,
         vertexColors: true,
-        map: loader.load("./textures/circle.jpg"),
+        map: loader.load("./circle.jpg"),
         blending: THREE.AdditiveBlending,
     });
     
