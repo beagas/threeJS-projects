@@ -4,7 +4,6 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { getFresnelMat } from "./getFresnelMat.js";
 import { renderControls } from "./GUI.js";
 import { createStarGroup } from "./stars.js";
-//const getStarfield = require('./getStarfield');
 
 let scene, camera, renderer, earthGroup, dayNight, cloudsMesh, fresnelMesh;
 
