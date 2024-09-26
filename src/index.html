@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Earth Visualization</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        #earth-name-container {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            pointer-events: none; /* Makes sure the labels are not interactive */
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+        }
+        #earth-name {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        #earth-description {
+            font-size: 16px;
+        }
+        #earth-instructions {
+            font-size: 12px;
+        }
+        #created-by {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="earth-name-container">
+    <div id="earth-name">Earth</div>
+    <div id="description">A 3D visualization of Earth with day and night textures, cloud layers, and a glowing atmosphere.
+    </div>
+    <div id="earth-instructions">Scroll mouse wheel to zoom in and out.</div>
+    <div id="earth-instructions">Click left button to rotate the Earth.</div>
+    <div id="earth-instructions">Click right button to drag the Earth.</div>
+    </div>
+    <div id="created-by">Created by beagas</div>
+    <script type="module" src="index.js"></script>
+    <script> 
+      var camera, scene, renderer;
+    </script>
+  </body>
+</html>
